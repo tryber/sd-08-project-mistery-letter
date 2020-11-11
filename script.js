@@ -16,7 +16,7 @@ function checaInput() {
 
 function contadorPalavras() {
   const spanList = document.querySelectorAll('span');
-  contador.innerText = `Total de palavras: ${spanList.length}`;
+  contador.innerText = spanList.length;
 }
 
 function limpaCarta() {
