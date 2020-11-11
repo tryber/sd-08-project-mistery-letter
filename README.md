@@ -11,9 +11,9 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 ### ANTES DE COMEÇAR A DESENVOLVER:
 
 1. Clone o repositório
-  * `git clone git@github.com:tryber/sd-0x-block5-project-mistery-letter.git`.
+  * `git clone git@github.com:tryber/sd-08-project-mistery-letter.git`.
   * Entre na pasta do repositório que você acabou de clonar:
-    * `sd-0x-block5-project-mistery-letter`
+    * `sd-08-project-mistery-letter`
 
 2. Crie uma branch a partir da branch `master`
   * Verifique que você está na branch `master`
@@ -40,13 +40,13 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   * Usando o exemplo anterior: `git push -u origin joaozinho-project-mistery-letter`
 
 6. Crie um novo `Pull Request` _(PR)_
-  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-0x-block5-project-mistery-letter/pulls)
+  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-08-project-mistery-letter/pulls)
   * Clique no botão verde _"New pull request"_
   * Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
   * Clique no botão verde _"Create pull request"_
   * Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
   * **Não se preocupe em preencher mais nada por enquanto!**
-  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-0x-block5-project-mistery-letter/pulls) e confira que o seu _Pull Request_ está criado
+  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-08-project-mistery-letter/pulls) e confira que o seu _Pull Request_ está criado
 
 ---
 
