@@ -6,7 +6,7 @@ let isEmpty = true;
 
 function checaInput() {
   for (let index = 0; index < (input.value).length; index += 1){
-    if (input.value[index] !== ' '){
+    if (input.value[index] !== ' ') {
       isEmpty = false;
       return;
     }
@@ -34,7 +34,7 @@ function criaCarta() {
     return;
   }
 
-  let words = (input.value).split(' ');
+  const words = (input.value).split(' ');
 
   for (let index = 0; index < words.length; index += 1) {
     const span = document.createElement('span');
@@ -47,4 +47,3 @@ function criaCarta() {
 }
 
 btnCria.addEventListener('click', criaCarta);
-
