@@ -1,11 +1,12 @@
 const input = document.getElementById('carta-texto');
 const btnCria = document.getElementById('criar-carta');
 const cartaGerada = document.getElementById('carta-gerada');
+const contador = document.getElementById('carta-contador');
 let isEmpty = true;
 
 
 function checaInput() {
-  for (let index = 0; index < (input.value).length; index += 1){
+  for (let index = 0; index < (input.value).length; index += 1) {
     if (input.value[index] !== ' ') {
       isEmpty = false;
       return;
@@ -13,8 +14,15 @@ function checaInput() {
   }
 }
 
+function contadorPalavras() {
+  const spanList = document.querySelectorAll('span');
+  contador.innerText = `Total de palavras: ${spanList.length}`;
+}
+
 function limpaCarta() {
   const spanList = document.querySelectorAll('span');
+  cartaGerada.innerText = '';
+  contador.innerText = '';
 
   for (let index = 0; index < spanList.length; index += 1) {
     spanList[index].remove();
@@ -30,7 +38,7 @@ function criaCarta() {
   checaInput();
 
   if (isEmpty === true) {
-    alert('Por favor, digite o conteúdo da carta.');
+    cartaGerada.innerText = 'Por favor, digite o conteúdo da carta.';
     return;
   }
 
@@ -44,6 +52,8 @@ function criaCarta() {
   }
 
   isEmpty = true;
+
+  contadorPalavras();
 }
 
 btnCria.addEventListener('click', criaCarta);
