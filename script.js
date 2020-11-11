@@ -29,8 +29,25 @@ function limpaCarta() {
   }
 }
 
-function estiloRandomico() {
+function estiloRandomico(spanClass) {
+  let estilo = ['newspaper', 'magazine1', 'magazine2'];
+  let tamanho = ['medium', 'big', 'reallybig'];
+  let rotacao = ['rotateleft', 'rotateright'];
+  let inclinacao = ['skewleft', 'skewright'];
+  
+  let randomNumber = Math.round(Math.random() * 2);
+  spanClass += `${estilo[randomNumber]} `;
 
+  randomNumber = Math.round(Math.random() * 2);
+  spanClass += `${tamanho[randomNumber]} `;
+
+  randomNumber = Math.round(Math.random());
+  spanClass += `${rotacao[randomNumber]} `;
+
+  randomNumber = Math.round(Math.random());
+  spanClass += `${inclinacao[randomNumber]}`;
+
+  return spanClass;
 }
 
 function criaCarta() {
@@ -45,9 +62,11 @@ function criaCarta() {
   const words = (input.value).split(' ');
 
   for (let index = 0; index < words.length; index += 1) {
+    let spanClass = ''
     const span = document.createElement('span');
     span.innerText = words[index];
-    span.addEventListener('click', estiloRandomico);
+    span.className = estiloRandomico(spanClass);
+    //span.addEventListener('click', estiloRandomico);
     cartaGerada.append(span);
   }
 
