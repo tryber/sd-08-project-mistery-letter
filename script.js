@@ -14,6 +14,7 @@ function gerarCarta() {
   texto = texto.replace(/  +/g, " ");
   if (texto === "" || texto === " ") {
     inputData.value = "";
+    paragrafo.innerHTML = "Por favor, digite o conteúdo da carta.";
     return alert("Por favor, digite o conteúdo da carta.");
   }
 
@@ -37,27 +38,29 @@ function formarClasseAleatoria() {
   var rotacao = ["rotateleft", "rotateright"];
   var inclinacao = ["skewleft", "skewright"];
 
-  let de0a31 = Math.floor(Math.random() * 4);
-  let de0a32 = Math.floor(Math.random() * 4);
-  let de0a21 = Math.floor(Math.random() * 3);
-  let de0a22 = Math.floor(Math.random() * 3);
-
   let classe = "";
 
-  if (estilo[de0a31] !== undefined) {
-    classe = classe.concat(" ", estilo[de0a31]);
-  }
+  while (classe.length <= 12) {
+    let a = Math.floor(Math.random() * 4);
+    let b = Math.floor(Math.random() * 4);
+    let c = Math.floor(Math.random() * 3);
+    let d = Math.floor(Math.random() * 3);
 
-  if (tamanho[de0a32] !== undefined) {
-    classe = classe.concat(" ", tamanho[de0a32]);
-  }
+    if (estilo[a] !== undefined) {
+      classe = classe.concat(" ", estilo[a]);
+    }
 
-  if (rotacao[de0a21] !== undefined) {
-    classe = classe.concat(" ", rotacao[de0a21]);
-  }
+    if (tamanho[b] !== undefined) {
+      classe = classe.concat(" ", tamanho[b]);
+    }
 
-  if (inclinacao[de0a22] !== undefined) {
-    classe = classe.concat(" ", inclinacao[de0a22]);
+    if (rotacao[c] !== undefined) {
+      classe = classe.concat(" ", rotacao[c]);
+    }
+
+    if (inclinacao[d] !== undefined) {
+      classe = classe.concat(" ", inclinacao[d]);
+    }
   }
 
   return classe;

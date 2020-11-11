@@ -43,17 +43,26 @@
 }
 
 .skewleft {
-  transform: skewX(10deg);
+  -webkit-transform: skew(10deg, 0deg);
+  -moz-transform: skew(10deg, 0deg);
+  -o-transform: skew(10deg, 0deg);
+  -ms-transform: skew(10deg, 0deg);
+  transform: skew(10deg, 0deg);
 }
 
 .skewright {
-  transform: skewX(-10deg);
+  -webkit-transform: skew(-10deg, 0deg);
+  -moz-transform: skew(-10deg, 0deg);
+  -o-transform: skew(-10deg, 0deg);
+  -ms-transform: skew(-10deg, 0deg);
+  transform: skew(-10deg, 0deg);
 }
 
 span {
   cursor: pointer;
   user-select: none;
   margin: 1px 2px;
+  display: inline-block;
 }
 
 #carta-gerada {
