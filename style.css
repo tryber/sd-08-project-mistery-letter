@@ -49,3 +49,14 @@
 .skewright {
   transform: skewX(-10deg);
 }
+
+span {
+  cursor: pointer;
+  user-select: none;
+}
+
+#carta-gerada {
+  width: 900px;
+  overflow-wrap: break-word;
+  line-height: 80px;
+}

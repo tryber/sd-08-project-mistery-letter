@@ -7,6 +7,8 @@ window.onload = function () {
 function gerarCarta() {
   let inputData = document.querySelector("#carta-texto");
   let paragrafo = document.querySelector("#carta-gerada");
+  let contador = document.querySelector("#carta-contador");
+  paragrafo.innerHTML = "";
 
   let texto = inputData.value;
   texto = texto.replace(/  +/g, " ");
@@ -18,8 +20,15 @@ function gerarCarta() {
   texto.split(" ").forEach((e) => {
     let spanText = document.createElement("span");
     spanText.innerHTML = e;
+    spanText.className = formarClasseAleatoria();
+    spanText.addEventListener("click", (e) => {
+      e.target.className = "";
+      e.target.className = formarClasseAleatoria();
+    });
     paragrafo.appendChild(spanText);
   });
+
+  contador.innerHTML = texto.split(" ").length;
 }
 
 function formarClasseAleatoria() {
