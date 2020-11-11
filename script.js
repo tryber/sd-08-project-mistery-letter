@@ -81,7 +81,7 @@ function criaCarta() {
   const words = (input.value).split(' ');
 
   for (let index = 0; index < words.length; index += 1) {
-    let spanClass = '';
+    const spanClass = '';
     const span = document.createElement('span');
     span.innerText = words[index];
     span.className = estiloRandomico(spanClass);
