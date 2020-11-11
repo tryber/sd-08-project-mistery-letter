@@ -40,7 +40,7 @@ function formarClasseAleatoria() {
 
   let classe = "";
 
-  while (classe.length <= 12) {
+  while (classe.length < 12) {
     let a = Math.floor(Math.random() * 4);
     let b = Math.floor(Math.random() * 4);
     let c = Math.floor(Math.random() * 3);
@@ -61,6 +61,13 @@ function formarClasseAleatoria() {
     if (inclinacao[d] !== undefined) {
       classe = classe.concat(" ", inclinacao[d]);
     }
+  }
+
+  if (classe[0] === " ") {
+    classe = classe.slice(1);
+  }
+  if (classe[classe.length - 1] === " ") {
+    classe = classe.slice(-1);
   }
 
   return classe;
