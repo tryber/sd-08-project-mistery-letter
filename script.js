@@ -21,6 +21,10 @@ function limpaCarta() {
   }
 }
 
+function estiloRandomico() {
+
+}
+
 function criaCarta() {
   limpaCarta();
   checaInput();
@@ -35,6 +39,7 @@ function criaCarta() {
   for (let index = 0; index < words.length; index += 1) {
     const span = document.createElement('span');
     span.innerText = words[index];
+    span.addEventListener('click', estiloRandomico);
     cartaGerada.append(span);
   }
 
