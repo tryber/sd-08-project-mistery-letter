@@ -14,8 +14,9 @@ btnCriarCarta.addEventListener('click', function () {
       word.innerText = cartaVect[index];
       word.classList.add(...getRandClasses());
       paragrafo.appendChild(word);
-      paragrafo.innerHTML = paragrafo.innerHTML + ' ';
+      paragrafo.innerHTML += ' ';
     }
+    listenersToWords();
   }
 });
 
@@ -49,4 +50,16 @@ function getRandClasses() {
   }
 
   return selectedClasses;
+}
+
+function novoEstilo(event) {
+  event.target.className = '';
+  event.target.classList.add(...getRandClasses());
+}
+
+function listenersToWords() {
+  const words = document.getElementsByTagName('span');
+  for (let index = 0; index < words.length; index += 1) {
+    words[index].addEventListener('click', novoEstilo);
+  }
 }
