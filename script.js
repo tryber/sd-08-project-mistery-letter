@@ -8,6 +8,7 @@ btnCriarCarta.addEventListener('click', function () {
   const cartaVect = carta.split(' ');
   if (cartaVect.length == carta.length + 1) {
     paragrafo.innerHTML = 'Por favor, digite o conteúdo da carta.';
+    contador.innerText = '';
   } else {
     for (let index = 0; index < cartaVect.length; index += 1) {
       const word = document.createElement('span');
@@ -16,8 +17,10 @@ btnCriarCarta.addEventListener('click', function () {
       paragrafo.appendChild(word);
       paragrafo.innerHTML += ' ';
     }
+    contaPalavras();
     listenersToWords();
   }
+  contador();
 });
 
 const estilos = [`newspaper`, `magazine1`, `magazine2`];
@@ -62,4 +65,11 @@ function listenersToWords() {
   for (let index = 0; index < words.length; index += 1) {
     words[index].addEventListener('click', novoEstilo);
   }
+}
+
+const contador = document.getElementById('carta-contador');
+function contaPalavras() {
+  const words = document.getElementsByTagName('span');
+  contador.innerText = words.length;
+  contador.innerText += ' palavras.';
 }
