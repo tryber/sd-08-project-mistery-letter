@@ -70,5 +70,4 @@ btnCriarCarta.addEventListener('click', function () {
     contaPalavras();
     listenersToWords();
   }
-  contador();
 });
