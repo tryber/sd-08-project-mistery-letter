@@ -52,7 +52,7 @@ function createLetter() {
 
   generatedLetter.textContent = '';
 
-  const allWords = letterText.match(/[\w\d]+/g);
+  const allWords = letterText.match(/[a-záàâãéèêíïóôõöúçñ]+/gi);
   for (let index = 0; index < allWords.length; index += 1) {
     const word = allWords[index];
     generatedLetter.appendChild(createWord(word));
