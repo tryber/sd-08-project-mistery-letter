@@ -28,7 +28,7 @@ function randomizeStyle(elem) {
 
 function count() {
   counter += 1;
-  counterParagraph.textContent = `${counter} palavra${counter > 1 ? 's' : ''}`;
+  counterParagraph.textContent = counter;
 }
 
 function createWord(text) {
@@ -46,8 +46,10 @@ function createLetter() {
   const letterText = inputLetterText.value;
 
   if (!letterText.trim()) {
-    alert('Por favor, digite o conteúdo da carta.');
+    generatedLetter.textContent = 'Por favor, digite o conteúdo da carta.';
     return;
+  } else {
+    generatedLetter.textContent = '';
   }
 
   const allWords = letterText.split(' ');
