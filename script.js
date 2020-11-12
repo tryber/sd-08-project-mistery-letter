@@ -6,7 +6,6 @@ const contador = document.getElementById('carta-contador');
 function contaPalavras() {
   const words = document.getElementsByTagName('span');
   contador.innerText = words.length;
-  contador.innerText += ' palavras.';
 }
 
 const estilos = ['newspaper', 'magazine1', 'magazine2'];
@@ -24,8 +23,8 @@ function getRandClasses() {
   const selectedClasses = [];
   const properties = allProperties();
   const numberOfClasses = Math.floor(
-    minClasses + Math.random() * (properties.length - minClasses + 1)
-  );
+    minClasses + (Math.random() * ((properties.length - minClasses) + 1)
+  ));
 
   for (let index = 0; index < numberOfClasses; index += 1) {
     const selectPos = Math.floor(Math.random() * properties.length);
