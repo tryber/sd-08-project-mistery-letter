@@ -2,31 +2,17 @@ const btnCriarCarta = document.getElementById('criar-carta');
 const campoTexto = document.getElementById('carta-texto');
 const paragrafo = document.getElementById('carta-gerada');
 
-btnCriarCarta.addEventListener('click', function () {
-  const carta = campoTexto.value;
-  paragrafo.innerHTML = '';
-  const cartaVect = carta.split(' ');
-  if (cartaVect.length == carta.length + 1) {
-    paragrafo.innerHTML = 'Por favor, digite o conteúdo da carta.';
-    contador.innerText = '';
-  } else {
-    for (let index = 0; index < cartaVect.length; index += 1) {
-      const word = document.createElement('span');
-      word.innerText = cartaVect[index];
-      word.classList.add(...getRandClasses());
-      paragrafo.appendChild(word);
-      paragrafo.innerHTML += ' ';
-    }
-    contaPalavras();
-    listenersToWords();
-  }
-  contador();
-});
+const contador = document.getElementById('carta-contador');
+function contaPalavras() {
+  const words = document.getElementsByTagName('span');
+  contador.innerText = words.length;
+  contador.innerText += ' palavras.';
+}
 
-const estilos = [`newspaper`, `magazine1`, `magazine2`];
-const tamanhos = [`medium`, `big`, `reallybig`];
-const rotacoes = [`rotateleft`, `rotateright`];
-const inclinacoes = [`skewleft`, `skewright`];
+const estilos = ['newspaper', 'magazine1', 'magazine2'];
+const tamanhos = ['medium', 'big', 'reallybig'];
+const rotacoes = ['rotateleft', 'rotateright'];
+const inclinacoes = ['skewleft', 'skewright'];
 
 function allProperties() {
   return [estilos, tamanhos, rotacoes, inclinacoes];
@@ -66,10 +52,23 @@ function listenersToWords() {
     words[index].addEventListener('click', novoEstilo);
   }
 }
-
-const contador = document.getElementById('carta-contador');
-function contaPalavras() {
-  const words = document.getElementsByTagName('span');
-  contador.innerText = words.length;
-  contador.innerText += ' palavras.';
-}
+btnCriarCarta.addEventListener('click', function () {
+  const carta = campoTexto.value;
+  paragrafo.innerHTML = '';
+  const cartaVect = carta.split(' ');
+  if (cartaVect.length === carta.length + 1) {
+    paragrafo.innerHTML = 'Por favor, digite o conteúdo da carta.';
+    contador.innerText = '';
+  } else {
+    for (let index = 0; index < cartaVect.length; index += 1) {
+      const word = document.createElement('span');
+      word.innerText = cartaVect[index];
+      word.classList.add(...getRandClasses());
+      paragrafo.appendChild(word);
+      paragrafo.innerHTML += ' ';
+    }
+    contaPalavras();
+    listenersToWords();
+  }
+  contador();
+});
