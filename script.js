@@ -48,11 +48,11 @@ function createLetter() {
   if (!letterText.trim()) {
     generatedLetter.textContent = 'Por favor, digite o conteúdo da carta.';
     return;
-  } else {
-    generatedLetter.textContent = '';
   }
 
-  const allWords = letterText.split(' ');
+  generatedLetter.textContent = '';
+
+  const allWords = letterText.match(/\w+/g);
   for (let index = 0; index < allWords.length; index += 1) {
     const word = allWords[index];
     generatedLetter.appendChild(createWord(word));
