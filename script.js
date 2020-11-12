@@ -8,8 +8,6 @@ const size = ['medium', 'big', 'reallybig'];
 const rotation = ['rotateleft', 'rotateright'];
 const inclination = ['skewleft', 'skewright'];
 
-let counter = 0;
-
 function getRandom(arr) {
   const index = Math.floor(Math.random() * arr.length);
   return arr[index];
@@ -26,9 +24,9 @@ function randomizeStyle(elem) {
   }
 }
 
-function count() {
-  counter += 1;
-  counterParagraph.textContent = counter;
+function updateCounter() {
+  const words = generatedLetter.querySelectorAll('span');
+  counterParagraph.textContent = words.length;
 }
 
 function createWord(text) {
@@ -38,7 +36,6 @@ function createWord(text) {
   word.addEventListener('click', function (event) {
     randomizeStyle(event.target);
   });
-  count();
   return word;
 }
 
@@ -57,6 +54,8 @@ function createLetter() {
     const word = allWords[index];
     generatedLetter.appendChild(createWord(word));
   }
+
+  updateCounter();
 }
 
 buttonCreateLetter.addEventListener('click', createLetter);
