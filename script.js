@@ -4,9 +4,11 @@ const pCarta = document.getElementById('carta-gerada');
 
 function gerarCarta() {
   pCarta.innerHTML = '';
-  if (/\s+$/.test(inputCarta.value)) alert('Por favor, digite o conteúdo da carta.');
+  if (/^\s+/.test(inputCarta.value) || !inputCarta.value) {
+    pCarta.innerHTML = 'Por favor, digite o conteúdo da carta.';
+    return;
+  }
   const inputCartaArray = inputCarta.value.split(' ');
-  console.log(inputCartaArray);
   for (let palavra in inputCartaArray) {
     if (inputCartaArray[palavra] !== '') { 
     const spanDaPalavra = document.createElement('span');
@@ -15,6 +17,6 @@ function gerarCarta() {
     }
   }
 }
-
 botaoGerar.addEventListener('click', gerarCarta);
 
+// const classes = ['newspaper', 'magazine1', 'magazine2', 'medium', 'big', 'reallybig', 'rotateleft', 'rotateright', 'skewleft', 'skewright'];
