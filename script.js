@@ -4,7 +4,7 @@ const pCarta = document.getElementById('carta-gerada');
 
 function gerarCarta() {
   pCarta.innerHTML = '';
-  if (/\s+$/.test(inputCarta.value)) alert('Por favor, digite o conteúdo da carta');
+  if (/\s+$/.test(inputCarta.value)) alert('Por favor, digite o conteúdo da carta.');
   const inputCartaArray = inputCarta.value.split(' ');
   console.log(inputCartaArray);
   for (let palavra in inputCartaArray) {
