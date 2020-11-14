@@ -9,3 +9,8 @@
 .carta-texto {
   width: 60%;
 }
+
+.palavra {
+  display: block;
+  background-color: green;
+}
