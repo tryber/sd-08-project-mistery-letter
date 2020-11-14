@@ -1,0 +1,11 @@
+.principal {
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+}
+
+.carta-texto {
+  width: 60%;
+}
