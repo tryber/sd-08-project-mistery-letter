@@ -12,7 +12,7 @@ inputLocal.addEventListener('keyup', recebeCarta);
   
 function criaDiv() {
   if ((cartaDigitada == '') | (cartaDigitada.trim() == '')){
-    alert('Digite algo');
+    paragrafoLocal.innerText = 'Por favor, digite o conteúdo da carta.';
   } else {
     for (let index = 0; index < cartaMisteriosa.length; index += 1) {  
       let span = document.createElement('span');
