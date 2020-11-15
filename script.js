@@ -1,12 +1,14 @@
 const paragrafoLocal = document.querySelector('#carta-gerada');
 const inputLocal = document.querySelector('#carta-texto');
 const buttonLocal = document.querySelector('#criar-carta');
+const pContLocal = document.querySelector('#carta-contador');
 let cartaDigitada = '';
 let cartaMisteriosa = [];
 
 function recebeCarta() {
   cartaDigitada = document.querySelector('#carta-texto').value;
   cartaMisteriosa = cartaDigitada.split(' ');
+  pContLocal.innerText = cartaMisteriosa.length - 1;
 }
 inputLocal.addEventListener('keyup', recebeCarta);
   
