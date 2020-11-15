@@ -48,14 +48,13 @@ function gerarCarta() {
       const spanDaPalavra = document.createElement('span');
       spanDaPalavra.innerHTML = inputCartaArray[palavra];
       spanDaPalavra.className = 'palavra';
-      pCarta.appendChild(spanDaPalavra);
       estilosAleatorios(spanDaPalavra);
+      pCarta.appendChild(spanDaPalavra);
     }
   }
   const numeroDePalavras = document.querySelectorAll('.palavra').length;
-  pContador.innerHTML = `O número de palavras codificadas é: ${numeroDePalavras}`;
+  pContador.innerHTML = numeroDePalavras;
 }
-
 botaoGerar.addEventListener('click', gerarCarta);
 
 pCarta.addEventListener('click', (event) => {
