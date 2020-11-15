@@ -2,23 +2,23 @@ const inputCarta = document.getElementById('carta-texto');
 const botaoGerar = document.getElementById('criar-carta');
 const pCarta = document.getElementById('carta-gerada');
 const pContador = document.getElementById('carta-contador');
-const classes = [
-  'newspaper',
-  'magazine1',
-  'magazine2',
-  'medium',
-  'big',
-  'reallybig',
-  'rotateleft',
-  'rotateright',
-  'skewleft',
-  'skewright',
-];
-const grupoEstilios = classes.slice(0, 3);
-const grupoTamanho = classes.slice(3, 6);
-const grupoRotacao = classes.slice(6, 8);
-const grupoInclinacao = classes.slice(8, 10);
-const grupo = [grupoEstilios, grupoTamanho, grupoRotacao, grupoInclinacao];
+// const classes = [
+//   'newspaper',
+//   'magazine1',
+//   'magazine2',
+//   'medium',
+//   'big',
+//   'reallybig',
+//   'rotateleft',
+//   'rotateright',
+//   'skewleft',
+//   'skewright',
+// ];
+const grupoEstilos = ['newspaper', 'magazine1', 'magazine2']; //classes.slice(0, 3);
+const grupoTamanho = ['medium', 'big', 'reallybig']; //classes.slice(3, 6);
+const grupoRotacao = ['rotateleft', 'rotateright']; //classes.slice(6, 8);
+const grupoInclinacao = ['skewleft', 'skewright']; //classes.slice(8, 10);
+const grupo = [grupoEstilos, grupoTamanho, grupoRotacao, grupoInclinacao];
 
 function estilosAleatorios(elemento) {
   elemento.className = 'palavra';
@@ -28,7 +28,7 @@ function estilosAleatorios(elemento) {
     grupoDeEstilos += 1
   ) {
     const estilo = grupo[grupoDeEstilos];
-    const index = Math.floor(Math.random() * 3);
+    const index = Math.floor(Math.random() * (grupo[grupoDeEstilos].length + 1));
     if (estilo[index]) {
       elemento.classList.add(estilo[index]);
     }
