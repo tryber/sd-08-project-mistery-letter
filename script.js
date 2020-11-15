@@ -11,10 +11,15 @@ function recebeCarta() {
 inputLocal.addEventListener('keyup', recebeCarta);
   
 function criaDiv() {
-  for (let index = 0; index < cartaMisteriosa.length; index += 1) {  
-    let span = document.createElement('span');
-    span.innerText = cartaMisteriosa[index];
-    paragrafoLocal.appendChild(span);
+  if ((cartaDigitada == '') | (cartaDigitada.trim() == '')){
+    alert('Digite algo');
+  } else {
+    for (let index = 0; index < cartaMisteriosa.length; index += 1) {  
+      let span = document.createElement('span');
+      span.innerText = cartaMisteriosa[index];
+      paragrafoLocal.appendChild(span);
+    }
   }
 }
+
 
