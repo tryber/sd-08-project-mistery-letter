@@ -22,16 +22,15 @@ const grupo = [grupoEstilos, grupoTamanho, grupoRotacao, grupoInclinacao];
 
 function estilosAleatorios(elemento) {
   elemento.className = 'palavra';
-  for (
-    let grupoDeEstilos = 0;
-    grupoDeEstilos < grupo.length;
-    grupoDeEstilos += 1
-  ) {
+  const classesAdicionadas = [];
+  for (let grupoDeEstilos = 0; grupoDeEstilos < grupo.length; grupoDeEstilos += 1) {
     const estilo = grupo[grupoDeEstilos];
-    const index = Math.floor(Math.random() * (grupo[grupoDeEstilos].length + 1));
-    if (estilo[index]) {
-      elemento.classList.add(estilo[index]);
-    }
+    const indexDoEstilo = Math.floor(Math.random() * grupo[grupoDeEstilos].length);
+    classesAdicionadas.push(estilo[indexDoEstilo]);
+  }
+  for (let classes = 0; classes < classesAdicionadas.length; classes += 1) {
+    const indexDaClasseAdicionada = Math.floor(Math.random() * classesAdicionadas.length);
+    elemento.classList.add(classesAdicionadas[indexDaClasseAdicionada]);
   }
 }
 
