@@ -1,8 +1,14 @@
+function chooseStyle(styleArray) {
+  const chosen = styleArray[Math.floor(Math.random() * styleArray.length)];
+
+  return chosen;
+}
+
 function changeStyle(event) {
-  const styleGroup = ['newspaper', 'magazine1', 'magazine2', 'none'];
-  const sizeGroup = ['medium', 'big', 'reallybig', 'none'];
-  const rotationGroup = ['rotateleft', 'rotateright', 'none'];
-  const tiltGroup = ['skewleft', 'skewright', 'none'];
+  const styleGroup = ['newspaper', 'magazine1', 'magazine2'];
+  const sizeGroup = ['medium', 'big', 'reallybig'];
+  const rotationGroup = ['rotateleft', 'rotateright'];
+  const tiltGroup = ['skewleft', 'skewright'];
   const groups = [styleGroup, sizeGroup, rotationGroup, tiltGroup];
   event.target.className = '';
 
@@ -11,22 +17,16 @@ function changeStyle(event) {
   }
 }
 
-function chooseStyle(styleArray) {
-  const chosen = styleArray[Math.floor(Math.random() * styleArray.length)];
-
-  return chosen;
-}
-
 function createWordStyle(word) {
-  const styleGroup = ['newspaper', 'magazine1', 'magazine2', 'none'];
-  const sizeGroup = ['medium', 'big', 'reallybig', 'none'];
-  const rotationGroup = ['rotateleft', 'rotateright', 'none'];
-  const tiltGroup = ['skewleft', 'skewright', 'none'];
+  const styleGroup = ['newspaper', 'magazine1', 'magazine2'];
+  const sizeGroup = ['medium', 'big', 'reallybig'];
+  const rotationGroup = ['rotateleft', 'rotateright'];
+  const tiltGroup = ['skewleft', 'skewright'];
   const groups = [styleGroup, sizeGroup, rotationGroup, tiltGroup];
   const span = document.createElement('span');
   span.innerText = word;
   span.addEventListener('click', changeStyle);
-  
+
   for (let i = 0; i < groups.length; i += 1) {
     span.classList.add(chooseStyle(groups[i]));
   }
@@ -43,7 +43,7 @@ function generateLetter() {
   let counter = 0;
 
   if (wordArray[0] === '') {
-    alert('Por favor, digite o conteúdo da carta.')
+    generatedLetter.innerHTML = 'Por favor, digite o conteúdo da carta.';
     return;
   }
 
