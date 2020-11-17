@@ -11,45 +11,49 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 ### ANTES DE COMEÇAR A DESENVOLVER:
 
 1. Clone o repositório
-  * `git clone git@github.com:tryber/sd-08-project-mistery-letter.git`.
-  * Entre na pasta do repositório que você acabou de clonar:
-    * `sd-08-project-mistery-letter`
+
+- `git clone git@github.com:tryber/sd-08-project-mistery-letter.git`.
+- Entre na pasta do repositório que você acabou de clonar:
+  - `sd-08-project-mistery-letter`
 
 2. Crie uma branch a partir da branch `master`
-  * Verifique que você está na branch `master`
-    * Exemplo: `git branch`
-  * Se não estiver, mude para a branch `master`
-    * Exemplo: `git checkout master`
-  * Agora crie uma branch à qual você vai submeter os `commits` do seu projeto
-    * Você deve criar uma branch no seguinte formato: `nome-de-usuario-nome-do-projeto`
-    * Exemplo: `git checkout -b joaozinho-project-mistery-letter`
+
+- Verifique que você está na branch `master`
+  - Exemplo: `git branch`
+- Se não estiver, mude para a branch `master`
+  - Exemplo: `git checkout master`
+- Agora crie uma branch à qual você vai submeter os `commits` do seu projeto
+  - Você deve criar uma branch no seguinte formato: `nome-de-usuario-nome-do-projeto`
+  - Exemplo: `git checkout -b joaozinho-project-mistery-letter`
 
 4. Adicione as mudanças ao _stage_ do Git e faça um `commit`
-  * Verifique que as mudanças ainda não estão no _stage_
-    * Exemplo: `git status` (deve aparecer listada a pasta _joaozinho_ em vermelho)
-  * Adicione o novo arquivo ao _stage_ do Git
-      * Exemplo:
-        * `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
-        * `git status` (deve aparecer listado o arquivo _joaozinho/README.md_ em verde)
-  * Faça o `commit` inicial
-      * Exemplo:
-        * `git commit -m 'iniciando o projeto x'` (fazendo o primeiro commit)
-        * `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
+
+- Verifique que as mudanças ainda não estão no _stage_
+  - Exemplo: `git status` (deve aparecer listada a pasta _joaozinho_ em vermelho)
+- Adicione o novo arquivo ao _stage_ do Git
+  - Exemplo:
+    - `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
+    - `git status` (deve aparecer listado o arquivo _joaozinho/README.md_ em verde)
+- Faça o `commit` inicial
+  - Exemplo:
+    - `git commit -m 'iniciando o projeto x'` (fazendo o primeiro commit)
+    - `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
 
 5. Adicione a sua branch com o novo `commit` ao repositório remoto
-  * Usando o exemplo anterior: `git push -u origin joaozinho-project-mistery-letter`
+
+- Usando o exemplo anterior: `git push -u origin joaozinho-project-mistery-letter`
 
 6. Crie um novo `Pull Request` _(PR)_
-  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-08-project-mistery-letter/pulls)
-  * Clique no botão verde _"New pull request"_
-  * Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
-  * Clique no botão verde _"Create pull request"_
-  * Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
-  * **Não se preocupe em preencher mais nada por enquanto!**
-  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-08-project-mistery-letter/pulls) e confira que o seu _Pull Request_ está criado
+
+- Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-08-project-mistery-letter/pulls)
+- Clique no botão verde _"New pull request"_
+- Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
+- Clique no botão verde _"Create pull request"_
+- Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
+- **Não se preocupe em preencher mais nada por enquanto!**
+- Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-08-project-mistery-letter/pulls) e confira que o seu _Pull Request_ está criado
 
 ---
-
 
 # Entregáveis
 
@@ -83,39 +87,39 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 ### 👀Observações importantes:
 
-* Os requisitos do seu projeto são avaliados automaticamente, sendo utilizada a resolução de tela de `1366 x 768` (1366 pixels de largura por 768 pixels de altura).
+- Os requisitos do seu projeto são avaliados automaticamente, sendo utilizada a resolução de tela de `1366 x 768` (1366 pixels de largura por 768 pixels de altura).
 
-  * #### ⚠️ Logo, recomenda-se desenvolver seu projeto usando a mesma resolução, via instalação [deste plugin](https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh?hl=en) do `Chrome` para facilitar a configuração da resolução. ⚠️
+  - #### ⚠️ Logo, recomenda-se desenvolver seu projeto usando a mesma resolução, via instalação [deste plugin](https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh?hl=en) do `Chrome` para facilitar a configuração da resolução. ⚠️
 
-* Caso for utilizar imagens nesse projeto, atente-se para o tamanho delas. **Não utilize imagens com um tamanho maior que _500Kb_.**
-  * #### ⚠️ Utilize uma ferramenta [como esta](https://picresize.com/pt) para redimensionar as imagens. ⚠️
+- Caso for utilizar imagens nesse projeto, atente-se para o tamanho delas. **Não utilize imagens com um tamanho maior que _500Kb_.**
 
-  * Caso a avaliação falhe com alguma mensagem de erro parecida com `[409:0326/130838.878602:FATAL:memory.cc(22)] Out of memory. size=4194304`, provavelmente as imagens que você está utilizando estão muito grandes. Tente redimensiona-las para um tamanho menor.
+  - #### ⚠️ Utilize uma ferramenta [como esta](https://picresize.com/pt) para redimensionar as imagens. ⚠️
 
-* Para verificar se a sua avaliação foi computada com sucesso, você pode verificar os **detalhes da execução do avaliador**.
+  - Caso a avaliação falhe com alguma mensagem de erro parecida com `[409:0326/130838.878602:FATAL:memory.cc(22)] Out of memory. size=4194304`, provavelmente as imagens que você está utilizando estão muito grandes. Tente redimensiona-las para um tamanho menor.
 
-  * Na página do seu _Pull Request_, acima do "botão de merge", procure por _**"Evaluator job"**_ e clique no link _**"Details"**_;
+- Para verificar se a sua avaliação foi computada com sucesso, você pode verificar os **detalhes da execução do avaliador**.
 
-  * Na página que se abrirá, procure pela linha _**"Cypress evaluator step"**_ e clique nela;
+  - Na página do seu _Pull Request_, acima do "botão de merge", procure por _**"Evaluator job"**_ e clique no link _**"Details"**_;
 
-  * Analise os resultados a partir da mensagem _**"(Run Starting)"**_;
+  - Na página que se abrirá, procure pela linha _**"Cypress evaluator step"**_ e clique nela;
 
-  * Caso tenha dúvidas, consulte [este vídeo](https://vimeo.com/420861252) ou procure a monitoria.
+  - Analise os resultados a partir da mensagem _**"(Run Starting)"**_;
 
+  - Caso tenha dúvidas, consulte [este vídeo](https://vimeo.com/420861252) ou procure a monitoria.
 
-* Você tem liberdade para adicionar novos comportamentos ao seu projeto, seja na forma de aperfeiçoamentos em requisitos propostos ou novas funcionalidades, **desde que tais comportamentos adicionais não conflitem com os requisitos propostos**.
+- Você tem liberdade para adicionar novos comportamentos ao seu projeto, seja na forma de aperfeiçoamentos em requisitos propostos ou novas funcionalidades, **desde que tais comportamentos adicionais não conflitem com os requisitos propostos**.
 
-  * Em outras palavras, você pode fazer mais do que for pedido, mas nunca menos.
+  - Em outras palavras, você pode fazer mais do que for pedido, mas nunca menos.
 
-* Contudo, tenha em mente que **nada além do que for pedido nos requisitos será avaliado**. _Esta é uma oportunidade de você exercitar sua criatividade e experimentar com os conhecimentos adquiridos._
+- Contudo, tenha em mente que **nada além do que for pedido nos requisitos será avaliado**. _Esta é uma oportunidade de você exercitar sua criatividade e experimentar com os conhecimentos adquiridos._
 
 ---
 
 ## Requisitos Obrigatórios:
 
-* Neste projeto, você implementará um gerador de cartas misteriosas.
+- Neste projeto, você implementará um gerador de cartas misteriosas.
 
-**Ou seja, dado um valor digitado em um campo de texto, apresentar as palavras com uma aparência de uma carta onde cada palavra possui uma estilização própria.** 
+**Ou seja, dado um valor digitado em um campo de texto, apresentar as palavras com uma aparência de uma carta onde cada palavra possui uma estilização própria.**
 
 ### 1 - Deve haver um `input` com o `id="carta-texto"` onde o usuário poderá digitar o conteúdo da carta.
 
@@ -123,7 +127,7 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 ### 3 - Deve haver um botão com `id="criar-carta"` e ao clicar nesse botão, a carta misteriosa deve ser gerada.
 
-  Pontos importantes:
+Pontos importantes:
 
     * Cada palavra deve aparecer dentro de uma tag `span`.
     * As tags `span` devem ser adicionadas como filha do parágrafo que possui o id `carta-gerada`.
@@ -134,7 +138,7 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 ### 6 - Crie a classe `newspaper`.
 
-  Pontos importantes:
+Pontos importantes:
 
     * Defina as propriedades:
       - `background-color` com o valor `antiquewhite`
@@ -143,7 +147,7 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 ### 7 - Crie a classe `magazine1`.
 
-  Pontos importantes:
+Pontos importantes:
 
     * Defina as propriedades:
       - `background-color` com o valor `teal`
@@ -154,7 +158,7 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 ### 8 - Crie a classe `magazine2`.
 
-  Pontos importantes:
+Pontos importantes:
 
     * Defina as propriedades:
       - `background-image` com a imagem `images/pink-pattern.png`
@@ -164,7 +168,7 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 ### 9 - Crie a classe `medium`.
 
-  Pontos importantes:
+Pontos importantes:
 
     * Defina as propriedades:
       - `font-size` com o valor `20px`
@@ -172,7 +176,7 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 ### 10 - Crie a classe `big`.
 
-  Pontos importantes:
+Pontos importantes:
 
     * Defina as propriedades:
       - `font-size` com o valor `30px`
@@ -180,7 +184,7 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 ### 11 - Crie a classe `reallybig`.
 
-  Pontos importantes:
+Pontos importantes:
 
     * Defina as propriedades:
       - `font-size` com o valor `40px`
@@ -188,35 +192,35 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 ### 12 - Crie a classe `rotateleft`.
 
-  Pontos importantes:
+Pontos importantes:
 
     * Defina as propriedades:
       - `transform` com o valor `rotate(-5deg)`
 
 ### 13 - Crie a classe `rotateright`.
 
-  Pontos importantes:
+Pontos importantes:
 
     * Defina as propriedades:
       - `transform` com o valor `rotate(5deg)`
 
 ### 14 - Crie a classe `skewleft`.
 
-  Pontos importantes:
+Pontos importantes:
 
     * Defina as propriedades:
       - `transform` com o valor `skewX(10deg)`;
 
 ### 15 - Crie a classe `skewright`.
 
-  Pontos importantes:
+Pontos importantes:
 
     * Defina as propriedades:
       - `transform` com o valor `skewX(-10deg)`;
 
 ### 16 - Adicione as classes de forma aleatória a fim de estilizar as palavras.
 
-  Pontos importantes:
+Pontos importantes:
 
     * As classes devem ser adicionadas às tags `span` de forma **aleatória**.
     * Sempre adicione mais de uma classe em uma palavra.
@@ -233,14 +237,14 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 ### 17 - Com uma carta misteriosa gerada, adicione a possibilidade de alterar o estilo de uma palavra específica ao clicar nela.
 
-  Pontos importantes:
+Pontos importantes:
 
     * Ao clicar em uma palavra, um novo estilo **aleatório** deve ser aplicado.
     * O número de mudanças deve ser ilimitado;
 
 ### 18 - Deve haver um parágrafo com o `id="carta-contador"` onde existirá um contador de palavras.
 
-  Pontos importantes:
+Pontos importantes:
 
     * Esse contador deve informar a quantidade de palavras presentes na carta misteriosa gerada.
 
@@ -262,13 +266,13 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 ### DURANTE O DESENVOLVIMENTO
 
-* ⚠ **RECOMENDAMOS QUE VOCÊ FIQUE ATENTO ÀS ISSUES DO CODDE CLIMATE, PARA RESOLVÊ-LAS ANTES DE FINALIZAR O DESENVOLVIMENTO. A PARTIR DO PRÓXIMO BLOCO SEU PROJETO SOMENTE SERÁ AVALIADO SE NÃO TIVER ISSUES NO CODE CLIMATE!** ⚠
+- ⚠ **RECOMENDAMOS QUE VOCÊ FIQUE ATENTO ÀS ISSUES DO CODDE CLIMATE, PARA RESOLVÊ-LAS ANTES DE FINALIZAR O DESENVOLVIMENTO. A PARTIR DO PRÓXIMO BLOCO SEU PROJETO SOMENTE SERÁ AVALIADO SE NÃO TIVER ISSUES NO CODE CLIMATE!** ⚠
 
-* Faça `commits` das alterações que você fizer no código regularmente;
+- Faça `commits` das alterações que você fizer no código regularmente;
 
-* Lembre-se de sempre após um ~~(ou alguns)~~ `commits` atualizar o repositório remoto (o famoso `git push`);
+- Lembre-se de sempre após um ~~(ou alguns)~~ `commits` atualizar o repositório remoto (o famoso `git push`);
 
-* Os comandos que você utilizará com mais frequência são:
+- Os comandos que você utilizará com mais frequência são:
 
   1. `git status` _(para verificar o que está em vermelho - fora do stage - e o que está em verde - no stage)_;
 
@@ -276,9 +280,9 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
   3. `git commit` _(para criar um commit com os arquivos que estão no stage do Git)_;
 
-  5. `git push -u nome-da-branch` _(para enviar o commit para o repositório remoto na primeira vez que fizer o `push` de uma nova branch)_;
+  4. `git push -u nome-da-branch` _(para enviar o commit para o repositório remoto na primeira vez que fizer o `push` de uma nova branch)_;
 
-  4. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_.
+  5. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_.
 
 ---
 
@@ -286,13 +290,13 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 Para sinalizar que o seu projeto está pronto para o _"Code Review"_ dos seus colegas, faça o seguinte:
 
-* Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
+- Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
 
-  * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
+  - No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
 
-  * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
+  - No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
 
-  * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-08`.
+  - No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-08`.
 
 Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362189205).
 
