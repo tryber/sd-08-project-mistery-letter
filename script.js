@@ -8,23 +8,27 @@ const setInclinacaoClass = ['skewleft', 'skewright'];
 
 const setNumberRandom = (arr) => {
   const classRandom = Math.ceil(Math.random() * arr.length);
-  return arr[classRandom];
+  return arr[classRandom - 1];
 };
-const resetElementsHTML = () => {
-  document.querySelectorAll('span').forEach((element) => element.remove());
+const resetElementsHTMLAll = (tag) => {
+  document.querySelectorAll(tag).forEach((element) => element.remove());
 };
-const setTagPNewText = () => {
-  textInput = getInputCartaTexto.value.split(' ');
-  resetElementsHTML();
+function setTagPNewText() {
+  const textInput = getInputCartaTexto.value.split(' ');
+  const countText = textInput.length;
+  resetElementsHTMLAll('span');
+  resetElementsHTMLAll('#carta-contador');
+  if (countText < 3) {
+    return (getTagPCriarCarta.innerHTML += `<span>${'Por favor, digite o conteúdo da carta.'}</span>`);
+  }
+
   Object.assign(textInput).forEach((element) => {
-    if (element === '' || element === null) {
-      return (getTagPCriarCarta.innerHTML += `<span>${'Por favor, digite o conteúdo da carta.'}</span>`);
-    }
     getTagPCriarCarta.innerHTML += `<span class="
     ${setNumberRandom(setEstiloClass)} ${setNumberRandom(setTamanhoClass)}
     ${setNumberRandom(setRotacaoClass)} ${setNumberRandom(setInclinacaoClass)}
     ">${element}</span>`;
   });
-};
+  return (getTagPCriarCarta.innerHTML += `<p id="carta-contador">${countText}</p>`);
+}
 
 getButtonCriarCarta.addEventListener('click', setTagPNewText);
