@@ -15,9 +15,11 @@ function checkOnlySpaces(array) {
 }
 
 function randomNumber(array) {
-  //Gera um número entre 0 e no máximo o tamnho do array-1 que foi enviado pela randomStyle()
-  let random = Math.round(Math.random() * (array.length-1));
-  console.log(random);
+  //Gera um número entre 0 e no máximo o tamnho do array que foi enviado pela randomStyle()
+  let random = Math.floor(Math.random() * array.length);
+  if(random === 3){
+    random = Math.floor(Math.random() * array.length);
+  }
   return random;
 }
 
