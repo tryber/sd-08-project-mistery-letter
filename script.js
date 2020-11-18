@@ -4,14 +4,12 @@ const wordCounter = document.querySelector('#carta-contador');
 function checkOnlySpaces(array) {
   let spaceCounter = 0;
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] == "") {
+    if (array[index] === '') {
       spaceCounter += 1;
     }
   }
   if (spaceCounter >= array.length) {
     return true;
-  } else {
-    return false;
   }
 }
 
@@ -22,7 +20,7 @@ function randomNumber(maxMumber) {
 function randomStyle(span) {
   const magazineOrNewspaper = ['magazine1', 'magazine2', 'newspaper'];
   const size = ['normal', 'big', 'reallybig'];
-  const skew = ["skewleft", 'skewright'];
+  const skew = ['skewleft', 'skewright'];
   const rotate = ['rotateleft', 'rotateright'];
   span.classList.add(magazineOrNewspaper[randomNumber(magazineOrNewspaper.length)]);
   span.classList.add(size[randomNumber(size.length)]);
@@ -34,7 +32,7 @@ function randomStyle(span) {
 function generateSpan() {
   letter.innerHTML = '';
   const text = document.querySelector('#carta-texto').value;
-  const strings = text.split(" ");
+  const strings = text.split(' ');
   if (text === "" || checkOnlySpaces(strings)) {
     letter.innerHTML = 'Por favor, digite o conteúdo da carta.';
   } else {
@@ -43,7 +41,7 @@ function generateSpan() {
       newLetter.innerHTML = strings[index];
       newLetter = randomStyle(newLetter);
       newLetter.addEventListener('click', function (event) {
-        event.target.classList = "";
+        event.target.classList = '';
         randomStyle(event.target);
       });
       letter.appendChild(newLetter);
