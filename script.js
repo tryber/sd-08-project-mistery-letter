@@ -27,7 +27,7 @@ function randomStyle(span) {
   //Recebe a span que foi criada no generateSpan()
   //Separa os styles em vetores
   const magazineOrNewspaper = ['magazine1', 'magazine2', 'newspaper'];
-  const size = ['normal', 'big', 'reallybig'];
+  const size = ['medium', 'big', 'reallybig'];
   const skew = ['skewleft', 'skewright'];
   const rotate = ['rotateleft', 'rotateright'];
 
@@ -84,15 +84,3 @@ function generateLetter() {
 }
 
 window.onload = generateLetter();
-
--[ 'newspaper',
--  'magazine1',
--  'magazine2',
--  'medium',
--  'big',
--  'reallybig',
--  'rotateleft',
--  'rotateright',
--  'skewleft',
--  'skewright' ]
-+[ 'magazine2', 'normal', 'skewright', 'rotateright' ]
