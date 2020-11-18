@@ -1,11 +1,13 @@
-//Verifica se todas as posições do arrão são um espaço
+//Verifica se todas as posições do array são um espaço
 function checkOnlySpaces(array) {
   let spaceCounter = 0;
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] === '') {
+      //se for espaço adiciona ao contador
       spaceCounter += 1;
     }
   }
+  //Verifica se todos a quantidade de espaços é igual ao tamnho do array e retorna a resposta
   if (spaceCounter >= array.length) {
     return true;
   }
@@ -15,6 +17,7 @@ function checkOnlySpaces(array) {
 function randomNumber(array) {
   //Gera um número entre 0 e no máximo o tamnho do array-1 que foi enviado pela randomStyle()
   let random = Math.round(Math.random() * (array.length-1));
+  console.log(random);
   return random;
 }
 
