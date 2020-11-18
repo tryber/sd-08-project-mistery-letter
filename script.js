@@ -32,10 +32,11 @@ function randomStyle(span) {
 }
 
 function generateSpan() {
+  letter.innerHTML = '';
   const text = document.querySelector('#carta-texto').value;
   const strings = text.split(" ");
   if (text === "" || checkOnlySpaces(strings)) {
-    alert('Por favor, digite o conteúdo da carta.');
+    letter.innerHTML = 'Por favor, digite o conteúdo da carta.';
   } else {
     for (let index = 0; index < strings.length; index += 1) {
       let newLetter = document.createElement('span');
