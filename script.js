@@ -1,5 +1,4 @@
-const letter = document.querySelector('#carta-gerada');
-const wordCounter = document.querySelector('#carta-contador');
+
 
 function checkOnlySpaces(array) {
   let spaceCounter = 0;
@@ -11,10 +10,13 @@ function checkOnlySpaces(array) {
   if (spaceCounter >= array.length) {
     return true;
   }
+  return false;
 }
 
-function randomNumber(maxMumber) {
-  return Math.round(Math.random() * maxMumber);
+function randomNumber(array) {
+  let randomNumber = Math.round(Math.random() * (array.length-1));
+  console.log(randomNumber);
+  return randomNumber;
 }
 
 function randomStyle(span) {
@@ -22,24 +24,26 @@ function randomStyle(span) {
   const size = ['normal', 'big', 'reallybig'];
   const skew = ['skewleft', 'skewright'];
   const rotate = ['rotateleft', 'rotateright'];
-  span.classList.add(magazineOrNewspaper[randomNumber(magazineOrNewspaper.length)]);
-  span.classList.add(size[randomNumber(size.length)]);
-  span.classList.add(skew[randomNumber(skew.length)]);
-  span.classList.add(rotate[randomNumber(rotate.length)]);
+  span.classList.add(magazineOrNewspaper[randomNumber(magazineOrNewspaper)]);
+  span.classList.add(size[randomNumber(size)]);
+  span.classList.add(skew[randomNumber(skew)]);
+  span.classList.add(rotate[randomNumber(rotate)]);
   return span;
 }
 
 function generateSpan() {
+  const letter = document.querySelector('#carta-gerada');
+  const wordCounter = document.querySelector('#carta-contador');
   letter.innerHTML = '';
   const text = document.querySelector('#carta-texto').value;
   const strings = text.split(' ');
-  if (text === "" || checkOnlySpaces(strings)) {
+  if (text === '' || checkOnlySpaces(strings)) {
     letter.innerHTML = 'Por favor, digite o conteúdo da carta.';
   } else {
     for (let index = 0; index < strings.length; index += 1) {
       let newLetter = document.createElement('span');
-      newLetter.innerHTML = strings[index];
       newLetter = randomStyle(newLetter);
+      newLetter.innerHTML = strings[index];
       newLetter.addEventListener('click', function (event) {
         event.target.classList = '';
         randomStyle(event.target);
