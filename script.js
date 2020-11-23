@@ -35,13 +35,14 @@ function generateLetter() {
   if (checkText()) {
     return;
   }
+  genLetter.textContent = '';
   let listWords = [];
   listWords = inputLetter.value.split(' ');
   countDisplay.innerHTML = listWords.length;
   for (let index = 0; index < listWords.length; index += 1) {
     const span = document.createElement('span');
     span.style.display = 'inline-block';
-    span.innerText = listWords[index];
+    span.textContent = listWords[index];
     addClass(span);
     genLetter.appendChild(span);
   }
