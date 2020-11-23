@@ -1,3 +1,18 @@
+.view {
+  display: flex;
+  justify-content: center;
+}
+
+.controls {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.controls button {
+  margin-top: 10px;
+}
+
 .view p span {
   margin-left: 20px;
 }
