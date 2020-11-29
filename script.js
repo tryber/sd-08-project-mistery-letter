@@ -51,6 +51,7 @@ function randomClasses() {
 
 function createLetter() {
   const letterParagraph = document.getElementById('carta-gerada');
+  const contador = document.getElementById('carta-contador');
   const inputText = document.getElementById('carta-texto').value;
   const arrayText = splitText(inputText);
 
@@ -58,7 +59,6 @@ function createLetter() {
 
   for (let i = 0; i < arrayText.length; i += 1) {
     const word = arrayText[i];
-
     if (word !== '') {
       const spanText = document.createElement('span');
       spanText.className = randomClasses();
@@ -76,6 +76,8 @@ function createLetter() {
     letterParagraph.appendChild(spanText);
     document.getElementById('carta-texto').value = '';
   }
+
+  contador.innerHTML = `${arrayText.length}`;
 }
 
 letterBtn.addEventListener('click', createLetter);
