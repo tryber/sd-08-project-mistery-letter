@@ -43,18 +43,14 @@ function randomClasses() {
       classIndex = 2;
     }
 
-    classes = classes.concat(' ', getClasses(indexGrp, classIndex));
+    classes += `${getClasses(indexGrp, classIndex)} `;
   }
 
   return classes;
 }
 
 function createLetter() {
-  const outputLetter = document.getElementById('output');
   const letterParagraph = document.getElementById('carta-gerada');
-
-  outputLetter.appendChild(letterParagraph);
-
   const inputText = document.getElementById('carta-texto').value;
   const arrayText = splitText(inputText);
 
@@ -62,10 +58,10 @@ function createLetter() {
 
   for (let i = 0; i < arrayText.length; i += 1) {
     const word = arrayText[i];
-    const classes = randomClasses();
+
     if (word !== '') {
       const spanText = document.createElement('span');
-      spanText.className = classes;
+      spanText.className = randomClasses();
       spanText.innerHTML = word;
       letterParagraph.appendChild(spanText);
     } else {
