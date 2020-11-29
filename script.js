@@ -62,10 +62,10 @@ function createLetter() {
 
   for (let i = 0; i < arrayText.length; i += 1) {
     const word = arrayText[i];
-
+    const classes = randomClasses();
     if (word !== '') {
       const spanText = document.createElement('span');
-      spanText.className = randomClasses();
+      spanText.className = classes;
       spanText.innerHTML = word;
       letterParagraph.appendChild(spanText);
     } else {
