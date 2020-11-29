@@ -1,17 +1,40 @@
 const letterBtn = document.getElementById('criar-carta');
 
 function splitText(str) {
-    return str.split(' ');
+  return str.split(' ');
+}
+
+function getClasses(index, classIndex) {
+  const estilo = ['newspaper', 'magazine1', 'magazine2'];
+  const tamanho = ['medium', 'big', 'reallybig'];
+  const rotacao = ['rotateleft', 'rotateright', 'none'];
+  const inclinacao = ['skewleft', 'skewright', 'none'];
+
+  let classUnit = '';
+  switch (index) {
+    case 1:
+      classUnit = estilo[classIndex];
+      break;
+    case 2:
+      classUnit = tamanho[classIndex];
+      break;
+    case 3:
+      if (rotacao[classIndex] !== 'none') {
+        classUnit = rotacao[classIndex];
+      }
+      break;
+    case 4:
+      if (inclinacao[classIndex] !== 'none') {
+        classUnit = inclinacao[classIndex];
+      }
+      break;
+    default:
+  }
+  return classUnit;
 }
 
 function randomClasses() {
-  const estilo = [`newspaper`, `magazine1`, `magazine2`];
-  const tamanho = [`medium`, `big`, `reallybig`];
-  const rotacao = [`rotateleft`, `rotateright`, 'none'];
-  const inclinacao = [`skewleft`, `skewright`, 'none'];
-
   let classes = '';
-
   for (let indexGrp = 1; indexGrp <= 4; indexGrp += 1) {
     let classIndex = Math.round(Math.random() * 3);
     if (classIndex < 0) {
@@ -20,36 +43,16 @@ function randomClasses() {
       classIndex = 2;
     }
 
-    switch (indexGrp) {
-      case 1:
-        classes = classes.concat(" ", estilo[classIndex]);
-        break;
-      case 2:
-        classes = classes.concat(" ", tamanho[classIndex]);
-        break;
-      case 3:
-        if (rotacao[classIndex] != 'none') {
-          classes = classes.concat(" ", rotacao[classIndex]);
-        }
-        break;
-      case 4:
-        if (inclinacao[classIndex] != 'none') {
-          classes = classes.concat(" ", inclinacao[classIndex]);
-        }
-        break;
-      default:
-        console.log('error on the random!');
-    }
+    classes = classes.concat(' ', getClasses(indexGrp, classIndex));
   }
+
   return classes;
 }
-
-letterBtn.addEventListener('click', createLetter);
 
 function createLetter() {
   const outputLetter = document.getElementById('output');
   const letterParagraph = document.createElement('p');
-  letterParagraph.className = 'carta-gerada';
+  letterParagraph.id = 'carta-gerada';
 
   outputLetter.appendChild(letterParagraph);
 
@@ -59,9 +62,9 @@ function createLetter() {
   let emptyArray = false;
 
   for (let i = 0; i < arrayText.length; i += 1) {
-    let word = arrayText[i];
+    const word = arrayText[i];
 
-    if (word != '') {
+    if (word !== '') {
       const spanText = document.createElement('span');
       spanText.className = randomClasses();
       spanText.innerHTML = word;
@@ -80,3 +83,4 @@ function createLetter() {
   }
 }
 
+letterBtn.addEventListener('click', createLetter);
