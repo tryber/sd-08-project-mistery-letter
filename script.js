@@ -51,8 +51,7 @@ function randomClasses() {
 
 function createLetter() {
   const outputLetter = document.getElementById('output');
-  const letterParagraph = document.createElement('p');
-  letterParagraph.id = 'carta-gerada';
+  const letterParagraph = document.getElementById('carta-gerada');
 
   outputLetter.appendChild(letterParagraph);
 
