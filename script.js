@@ -12,20 +12,20 @@ function splitText(str) {
 }
 
 function randomIndexTres() {
-  let classIndex = Math.round(Math.random() * 3);
+  let classIndex = Math.round(Math.random() * 2);
   if (classIndex < 0) {
     classIndex = 0;
-  } else if (classIndex >= 3) {
+  } else if (classIndex >= 2) {
     classIndex = 2;
   }
   return classIndex;
 }
 
 function randomIndexDois() {
-  let classIndex = Math.round(Math.random() * 2);
+  let classIndex = Math.round(Math.random());
   if (classIndex < 0) {
     classIndex = 0;
-  } else if (classIndex >= 2) {
+  } else if (classIndex >= 1) {
     classIndex = 1;
   }
   return classIndex;
