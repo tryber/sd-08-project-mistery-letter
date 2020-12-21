@@ -15,11 +15,28 @@ const generateLetter = () => {
   const wordsArray = input.value.split(" ");
   wordsArray.forEach((elem) => {
     const span = document.createElement("span");
-    span.innerHTML = `${elem} `;
+    span.innerHTML = elem;
+    span.classList = getRandomClasses();
     if (span.innerHTML !== "") {
       paragraph.appendChild(span);
     }
   });
+  console.log(getRandomClasses())
+};
+
+const getRandomClasses = () => {
+  let classList = "";
+  const styleClasses = [`newspaper`, `magazine1`, `magazine2`];
+  const weightClasses = [`medium`, `big`, `reallybig`];
+  const rotateClasses = [`rotateleft`, `rotateright`];
+  const inclinationClasses = [`skewleft`, `skewright`];
+
+  const r = (n) => Math.floor(Math.random() * n);
+
+  //deixei de propósito a chance de cair undefined, pois não quero sempre todos os grupos de classes.
+  // rotate e inclination tem 1/3 de chances de dar undefined, ou seja, não estar presente no elemento;
+  classList = `${styleClasses[r(3.50)]} ${weightClasses[r(3.50)]} ${rotateClasses[r(3)]} ${inclinationClasses[r(3)]}`;
+  return classList;
 };
 
 window.onload = () => {

@@ -35,7 +35,7 @@
 }
 
 .rotateleft {
-  transform: rotate(-5deg);
+transform: rotate(-5deg);
 }
 
 .rotateright {
