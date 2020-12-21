@@ -1,31 +1,15 @@
-const button = document.querySelector("#criar-carta");
-const paragraph = document.querySelector("#carta-gerada");
-const input = document.querySelector("#carta-texto");
+const button = document.querySelector('#criar-carta');
+const paragraph = document.querySelector('#carta-gerada');
+const input = document.querySelector('#carta-texto');
 
 const removeAllChilds = (element) => {
   while (element.firstChild) {
     element.firstChild.remove();
   }
 };
-const generateLetter = () => {
-  removeAllChilds(paragraph);
-  if (input.value === undefined || input.value.trim() === "") {
-    paragraph.innerHTML = "Por favor, digite o conteúdo da carta.";
-  }
-  const wordsArray = input.value.split(" ");
-  wordsArray.forEach((elem) => {
-    const span = document.createElement("span");
-    span.innerHTML = elem;
-    span.classList = getRandomClasses();
-    if (span.innerHTML !== "") {
-      paragraph.appendChild(span);
-    }
-  });
-  console.log(getRandomClasses())
-};
 
 const getRandomClasses = () => {
-  let classList = "";
+  let classList = '';
   const styleClasses = [`newspaper`, `magazine1`, `magazine2`];
   const weightClasses = [`medium`, `big`, `reallybig`];
   const rotateClasses = [`rotateleft`, `rotateright`];
@@ -39,6 +23,22 @@ const getRandomClasses = () => {
   return classList;
 };
 
+const generateLetter = () => {
+  removeAllChilds(paragraph);
+  if (input.value === undefined || input.value.trim() === '') {
+    paragraph.innerHTML = 'Por favor, digite o conteúdo da carta.';
+  }
+  const wordsArray = input.value.split(' ');
+  wordsArray.forEach((elem) => {
+    const span = document.createElement('span');
+    span.innerHTML = elem;
+    span.classList = getRandomClasses();
+    if (span.innerHTML !== '') {
+      paragraph.appendChild(span);
+    }
+  });
+};
+
 window.onload = () => {
-  button.addEventListener("click", generateLetter);
+  button.addEventListener('click', generateLetter);
 };
