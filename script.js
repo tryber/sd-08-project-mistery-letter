@@ -27,6 +27,7 @@ const generateLetter = () => {
   removeAllChilds(paragraph);
   if (input.value === undefined || input.value.trim() === '') {
     paragraph.innerHTML = 'Por favor, digite o conteúdo da carta.';
+    paragraph.style.justifyContent = 'center';
   }
   const wordsArray = input.value.split(' ');
   wordsArray.forEach((elem) => {
@@ -38,6 +39,10 @@ const generateLetter = () => {
     }
   });
 };
+
+const getWordsCount = () => {
+  const count = document.querySelector('carta-contador');
+}
 
 window.onload = () => {
   button.addEventListener('click', generateLetter);

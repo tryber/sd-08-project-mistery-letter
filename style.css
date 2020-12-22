@@ -49,3 +49,44 @@
 .skewright {
   transform: skewX(-10deg);
 }
+
+body {
+  background-color: blue;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p span {
+  margin: 5px;
+  max-height: 40px;
+}
+
+.carta-gerada {
+  display: flex;
+  flex-wrap: wrap;
+  line-break: 0;
+  background-image: url(images/folha.png);
+  background-size: cover;
+  width: 60vmax;
+  min-height: 10vmax  ;
+  padding: 30px;
+}
+
+.contador {
+  align-items: center;
+  background-color: white;
+  display: flex;
+}
+
+.carta-contador {
+  margin: 5px;
+}
