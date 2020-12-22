@@ -18,8 +18,8 @@ const getRandomClasses = () => {
   const r = (n) => Math.floor(Math.random() * n);
 
   //deixei de propósito a chance de cair undefined, pois não quero sempre todos os grupos de classes.
-  // rotate e inclination tem 1/3 de chances de dar undefined, ou seja, não estar presente no elemento;
-  classList = `${styleClasses[r(3.50)]} ${weightClasses[r(3.50)]} ${rotateClasses[r(3)]} ${inclinationClasses[r(3)]}`;
+  // rotate tem 1/3 de chances de dar undefined, ou seja, não estar presente no elemento;
+  classList = `${styleClasses[r(3.50)]} ${weightClasses[r(3.50)]} ${rotateClasses[r(3)]} ${inclinationClasses[r(5)]}`;
   return classList;
 };
 
@@ -33,15 +33,18 @@ const generateLetter = () => {
   wordsArray.forEach((elem) => {
     const span = document.createElement('span');
     span.innerHTML = elem;
-    span.classList = getRandomClasses();
+    span.classList = `palavra ${getRandomClasses()}`;
     if (span.innerHTML !== '') {
       paragraph.appendChild(span);
     }
   });
+  getWordsCount();
 };
 
 const getWordsCount = () => {
-  const count = document.querySelector('carta-contador');
+  const count = document.querySelector('.carta-contador');
+  const palavras = document.querySelectorAll('.palavra')
+  count.innerHTML = palavras.length
 }
 
 window.onload = () => {

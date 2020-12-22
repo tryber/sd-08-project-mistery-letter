@@ -51,12 +51,20 @@
 }
 
 body {
-  background-color: blue;
+  background-image: url(images/livro-e-lupa-do-vintage-na-mesa-de-madeira-96710754.jpg);
+  background-size: cover;
+  background-position-y: 25%;
+  margin: 0;
 }
 
 header {
+  background-color: black;
+  color: white;
   display: flex;
+  font-size: 20px;
   justify-content: center;
+  margin-bottom: 20px;
+  opacity: 70%;
 }
 
 main {
@@ -77,14 +85,17 @@ p span {
   background-image: url(images/folha.png);
   background-size: cover;
   width: 60vmax;
-  min-height: 10vmax  ;
+  min-height: 10vmax;
   padding: 30px;
 }
 
 .contador {
   align-items: center;
   background-color: white;
+  border-radius: 25px;
   display: flex;
+  font-size: 17px;
+  padding: 10px;
 }
 
 .carta-contador {
