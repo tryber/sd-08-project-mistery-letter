@@ -44,9 +44,16 @@ const generateLetter = () => {
 const getWordsCount = () => {
   const count = document.querySelector('.carta-contador');
   const palavras = document.querySelectorAll('.palavra')
-  count.innerHTML = palavras.length
+  count.innerHTML = palavras.length;
+}
+
+const changeClasses = (event) => {
+  if (event.target.classList.contains('palavra')) {
+    event.target.classList = `palavra ${getRandomClasses()}`
+  }
 }
 
 window.onload = () => {
   button.addEventListener('click', generateLetter);
+  paragraph.addEventListener('click', changeClasses);
 };
