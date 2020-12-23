@@ -1,6 +1,18 @@
 const carta = document.querySelector('#carta-texto');
 const criarCarta = document.querySelector('#criar-carta');
 const cartaGerada = document.querySelector('#carta-gerada');
+const gerarClasse = [
+  'newspaper',
+  'magazine1',
+  'magazine2',
+  'medium',
+  'big',
+  'reallybig',
+  'rotateleft',
+  'rotateright',
+  'skewleft',
+  'skewright',
+];
 
 const gerarCarta = () => {
   if (!carta.value || !carta.value.trim()) {

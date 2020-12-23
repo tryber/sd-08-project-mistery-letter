@@ -59,3 +59,7 @@ button {
 .skewright {
   transform: skewX(-10deg);
 }
+
+span {
+  display: inline-block;
+}
