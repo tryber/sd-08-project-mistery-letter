@@ -18,6 +18,7 @@ const gerarCarta = () => {
   if (!carta.value || !carta.value.trim()) {
     cartaGerada.innerHTML = 'Por favor, digite o conteúdo da carta.';
   }
+  cartaGerada.innerHTML = '';
   const separarPalavras = carta.value.split(' ');
   separarPalavras.forEach((palavra) => {
     const novoSpan = document.createElement('span');
