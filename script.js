@@ -9,7 +9,7 @@ const gerarCarta = () => {
   const separarPalavras = carta.value.split(' ');
   separarPalavras.forEach((palavra) => {
     const novoSpan = document.createElement('span');
-    novoSpan.innerHTML = palavra + ' ';
+    novoSpan.innerHTML = `${palavra} `;
     cartaGerada.append(novoSpan);
   });
 };
