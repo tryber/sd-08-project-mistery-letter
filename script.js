@@ -13,7 +13,6 @@ const adicionarClasses = (palavra) => {
   const gerarRotacaoo = Math.floor(Math.random() * grupoRotacao.length);
   const gerarInclinacao = Math.floor(Math.random() * grupoInclinacao.length);
 
-  palavra.classList.add('palavra');
   palavra.classList.add(grupoEstilo[gerarEstilo]);
   palavra.classList.add(grupoTamanho[gerarTamanho]);
 
