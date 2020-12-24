@@ -38,6 +38,10 @@ const gerarCarta = () => {
     const novoSpan = document.createElement('span');
     novoSpan.innerHTML = `${palavra}`;
     adicionarClasses(novoSpan);
+    novoSpan.addEventListener('click', (event) => {
+      event.target.className = '';
+      adicionarClasses(event.target);
+    });
     cartaGerada.append(novoSpan);
   });
 
