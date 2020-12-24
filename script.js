@@ -1,6 +1,7 @@
 const carta = document.querySelector('#carta-texto');
 const criarCarta = document.querySelector('#criar-carta');
 const cartaGerada = document.querySelector('#carta-gerada');
+const cartaContador = document.querySelector('#carta-contador');
 const grupoEstilo = ['newspaper', 'magazine1', 'magazine2'];
 const grupoTamanho = ['medium', 'big', 'reallybig'];
 const grupoRotacao = ['rotateleft', 'rotateright'];
@@ -12,6 +13,7 @@ const adicionarClasses = (palavra) => {
   const gerarRotacaoo = Math.floor(Math.random() * grupoRotacao.length);
   const gerarInclinacao = Math.floor(Math.random() * grupoInclinacao.length);
 
+  palavra.classList.add('palavra');
   palavra.classList.add(grupoEstilo[gerarEstilo]);
   palavra.classList.add(grupoTamanho[gerarTamanho]);
 
@@ -39,6 +41,8 @@ const gerarCarta = () => {
     adicionarClasses(novoSpan);
     cartaGerada.append(novoSpan);
   });
+
+  cartaContador.innerHTML = separarPalavras.length;
 };
 
 criarCarta.addEventListener('click', gerarCarta);
