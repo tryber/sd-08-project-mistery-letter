@@ -4,10 +4,9 @@ const addletter = () => {
     const arrayWords = words.split(' ');
     arrayWords.map((element) => {
       const span = document.createElement('span');
-      //span.id = 'span';
-      span.innerHTML = element + '  ';
+      span.innerHTML = element.concat('  ');
       const insertSpan = document.querySelector('#carta-gerada');
-      insertSpan.appendChild(span);
+      return insertSpan.appendChild(span);
     });
   });
 };
